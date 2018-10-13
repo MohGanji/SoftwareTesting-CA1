@@ -5,4 +5,4 @@
 ## Commands:
 
 * build: `javac -cp .:/usr/share/java/junit4.jar *.java`
-* run: `java -cp .:/usr/share/java/junit4.jar TestRunner.java`
+* run: `java -cp .:/usr/share/java/junit4.jar TestRunner`
