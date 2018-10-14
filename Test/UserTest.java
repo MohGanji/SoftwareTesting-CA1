@@ -32,11 +32,21 @@ public class UserTest {
     }
 
     @Test
-    public void addFriend_MutualFriendship_CheckMutualFriendship(){
+    public void addFriend_MutualFriendship_CheckMutualFriendship_1(){
         User user1 = new User("gholam", "gholami");
         User user2 = new User("saeed", "saeedi");
         user1.addFriend(user2);
         assertTrue("gholam should be a friend of saeed!", user2.isFriendsWith(user1));
+    }
+
+    @Test
+    public void addFriend_MutualFriendship_CheckMutualFriendship_2(){
+        User user1 = new User("gholam", "gholami");
+        User user2 = new User("saeed", "saeedi");
+        user1.addFriend(user2);
+        user2.addFriend(user1);
+        user1.removeFriend(user2);
+        assertFalse("gholam should not be a friend of saeed!", user2.isFriendsWith(user1));
     }
 
     @Test
@@ -64,7 +74,8 @@ public class UserTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void isValidEmail_IllegalArgumentException_EmptyName(){
+    public void Constructor_IllegalArgumentException_EmptyName(){
         new User("", "gholami");
     }
+
 }
