@@ -6,9 +6,21 @@
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 public class UserTest {
+
+    @Test
+    public void testConstructor() {
+        User user = new User("foo", "bar");
+        User user2 = new User("spa", "zzz");
+        user.addFriend(user2);
+        assertEquals(true, user.isFriendsWith(user2));
+        assertEquals(true, user2.isFriendsWith(user));
+    }
+
+
     @Test
     public void addFriend_NotFriends_IfAddFriendTwoTimesAndRemove(){
         User user1 = new User("gholam", "gholami");
