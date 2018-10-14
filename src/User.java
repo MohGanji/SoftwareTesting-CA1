@@ -21,13 +21,11 @@ public class User {
         this.friends = new Vector<>();
     }
 
-    // Changed to public for testing
     public static String createEmailID(String firstpart, String secondpart) {
         String subfirst = firstpart.substring(1);
         return subfirst + "." + secondpart + "@test.ut.ac.ir";
     }
 
-    // Changed to public for testing
     public static boolean isEmailValid(String email) {
         String regex = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(([a-zA-Z\\-0-9]+\\.)*[a-zA-Z]{2,})$";
         Pattern pattern = Pattern.compile(regex);
