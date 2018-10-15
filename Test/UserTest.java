@@ -20,7 +20,6 @@ public class UserTest {
         assertEquals(true, user2.isFriendsWith(user));
     }
 
-
     @Test
     public void addFriend_NotFriends_IfAddFriendTwoTimesAndRemove(){
         User user1 = new User("gholam", "gholami");
