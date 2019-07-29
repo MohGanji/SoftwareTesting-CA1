@@ -1,5 +1,6 @@
 # SoftwareTesting-CA1
- softwareTesting project 1
+ 
+This repo contains Project 1 of Software testing course in University of Tehran, writing tests for a java program with `junit` 
 
 
 ## Commands:
